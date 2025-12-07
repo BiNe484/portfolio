@@ -2,7 +2,7 @@ import React from 'react'
 
 function Skill() {
   return (
-    <div className='bg-purple-600'>Skills!
+    <div id="skills" className='bg-purple-600'>Skills!
         <p>reactjs, javascript</p>
         <p>tiếng anh B1</p>
         <p>tiếng trung H2</p>

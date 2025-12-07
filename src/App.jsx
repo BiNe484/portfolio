@@ -1,23 +1,24 @@
-import Header from './components/Header.jsx'
-import Home from './components/Home.jsx'
-import About from './components/About.jsx'
-import Skill from './components/Skill.jsx'
-import Project from './components/Project.jsx'
-import Contact from './components/Contact.jsx'
-import Footer from './components/Footer.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from './layouts/MainLayout';
 
-function App() {
+import Profile from './pages/Profile';
+import Test from './pages/Test';
+
+export default function App() {
   return (
-  <>
-    <Header/>
-    <Home/>
-    <About/>
-    <Skill/>
-    <Project/>
-    <Contact/>
-    <Footer/>
-  </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
 
-export default App
+        {/* Layout dùng chung */}
+        <Route element={<MainLayout />}>
+
+          <Route path="/" element={<Profile />} />
+          {/*<Route path="/about" element={<About />} />*/}
+          <Route path="/test" element={<Test />} />
+          
+        </Route>
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
