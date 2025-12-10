@@ -28,9 +28,10 @@ function Header() {
 
   // Menu
   const menuItems = [
+    { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "contact", label: "Contact" },
+    { id: "projects", label: "Projects" },
   ];
 
   const renderMenu = () =>
@@ -51,14 +52,14 @@ function Header() {
     <header
       className={`
         fixed top-0 left-0 w-full z-50 transition-all duration-400
-        backdrop-blur-xl
-        ${scrolled ? "bg-white/80 shadow-lg" : "bg-white/5"}
+        backdrop-blur-sm
+        ${scrolled ? "bg-white/80 shadow-2xl" : "bg-white/10"}
       `}
     >
       <div className="max-w mx-auto px-4 py-3 flex items-center justify-between">
 
         {/* Tên */}
-        <div className="flex items-center">
+        <div className="flex items-center px-0 md:px-8">
           <span className={`text-lg font-semibold transition 
             ${scrolled ? "text-black" : "text-white"}
           `}>
@@ -67,7 +68,7 @@ function Header() {
         </div>
 
         {/* Menu */}
-        <nav className="flex gap-10">
+        <nav className="hidden md:flex gap-10">
           {renderMenu()}
         </nav>
 

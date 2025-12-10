@@ -13,23 +13,6 @@ export default function Profile() {
     <Skill/>
     <Project/>
     <Contact/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
-    <About/>
   </>
   )
 }

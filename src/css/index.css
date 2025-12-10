@@ -1,4 +1,20 @@
 @import "tailwindcss";
 * {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Times New Roman", Times, serif;
+}
+.fade-translate-up {
+  @apply translate-y-10;
+}
+.fade-translate-down {
+  @apply -translate-y-10;
+}
+.fade-translate-left {
+  @apply -translate-x-10;
+}
+.fade-translate-right {
+  @apply translate-x-10;
+}
+
+.fade-reset {
+  @apply translate-y-0 translate-x-0;
 }
