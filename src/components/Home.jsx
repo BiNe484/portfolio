@@ -32,13 +32,14 @@ function Home() {
           {/* BÊN TRÁI*/}
           <Grid size={{xs:12, md:6}}>
             <FadeIn direction="up">
-            <div className="text-white space-y-4 md:pt-0 pt-12">
+            <div className="text-white space-y-2 md:pt-0 pt-12">
               <p className="text-sm">Xin chào! Tôi là</p>
-              <h1 className="text-4xl font-bold">Bi</h1>
-              <p className="text-lg mb-2">
+              <h1 className="text-6xl font-bold">Nguyễn Minh Khánh</h1>
+              <p className="text-sm mb-12">Mọi người thường gọi tôi là <span className="text-md text-lg font-bold">Bi</span></p>
+              <p className="text-lg">
                 Sinh viên ngành CS tại trường T! Yêu thích các công việc về Tester, Thiết kế giao diện.
-              </p>
-              <p>Luôn khao khát học hỏi những điều mới mẻ mỗi ngày.</p>
+                Luôn khao khát học hỏi những điều mới mẻ mỗi ngày.
+                </p>
             </div>
             </FadeIn>
           </Grid>

@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 
 function Project() {
   return (
-    <section id="about" className="relative w-full flex pt-12">
+    <section id="projects" className="relative w-full flex pt-12">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden bg-linear-to-r from-slate-200 to-gray-100">
 
@@ -27,7 +27,7 @@ function Project() {
           {/* CỘT TRÁI */}
           <Grid size={{ xs: 12, md: 6 }}>
             <FadeIn direction="left" delay={100}>
-            <div className="relative w-full h-full min-h-[360px] rounded-2xl overflow-hidden shadow-2xl flex">
+            <div className="w-full h-full min-h-[360px] rounded-2xl overflow-hidden">
               <ProjectCard source={"./game.jpg"} title="Trò chơi" desc="Thiết kế giao diện và phát triển trò chơi hành động" />
             </div>
             </FadeIn>
@@ -38,14 +38,18 @@ function Project() {
             <div className="flex flex-col gap-4 h-full">
 
               {/* Card trên */}
-              <div className="flex-[0.4] min-h-[180px] rounded-2xl overflow-hidden shadow-2xl">
-                <ProjectCard title="Web App" desc="Phát triển giao diện Dashboard và quản lý" />
-              </div>
+              <FadeIn direction="right" delay={120}>
+                <div className="flex-[0.4] min-h-[360px] md:min-h-[180px] rounded-2xl overflow-hidden">
+                  <ProjectCard title="Web App" desc="Phát triển giao diện Dashboard và quản lý" />
+                </div>
+              </FadeIn>
 
               {/* Card dưới */}
-              <div className="flex-[0.6] min-h-[180px] rounded-2xl overflow-hidden shadow-2xl">
-                <ProjectCard title="Mobile App" desc="Phát triển giao diện ứng dụng ngân hàng di động" />
-              </div>
+              <FadeIn direction="right" delay={120}>
+                <div className="flex-[0.6] min-h-[360px] md:min-h-[180px] rounded-2xl overflow-hidden">
+                  <ProjectCard title="Mobile App" desc="Phát triển giao diện ứng dụng ngân hàng di động" />
+                </div>
+              </FadeIn>
 
             </div>
           </Grid>
