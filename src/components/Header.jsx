@@ -24,6 +24,29 @@ function Header() {
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
+  // Lắng nghe scroll để highlight menu
+  const [activeSection, setActiveSection] = useState("home");
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const onScroll = () => {
+      const scrollPos = window.scrollY + 80; // bù chiều cao header
+
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute("id");
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          setActiveSection(id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
 
 
   // Menu
@@ -31,22 +54,39 @@ function Header() {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
+    { id: "certificates", label: "Certificates" },
     { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
   ];
 
   const renderMenu = () =>
-    menuItems.map((item) => (
-      <button
-        key={item.id}
-        onClick={() => scrollToSection(item.id)}
-        className={`
-          cursor-pointer font-medium transition
-          ${scrolled ? "text-gray-800 hover:text-black" : "text-white hover:text-gray-200"}
-        `}
-      >
-        {item.label}
-      </button>
-    ));
+    menuItems.map((item) => {
+      const isActive = activeSection === item.id;
+
+      return (
+        <button
+          key={item.id}
+          onClick={() => scrollToSection(item.id)}
+          className={`
+            relative px-3 py-1 font-medium transition-all duration-300
+            ${scrolled ? "text-gray-800" : "text-white"}
+            ${isActive ? "text-blue-500" : "hover:text-blue-400"}
+          `}
+        >
+          {item.label}
+
+          {/* Border animation */}
+          <span
+            className={`
+              absolute inset-0 rounded-full border-2 transition-all duration-300
+              ${isActive
+                ? "border-blue-500 scale-100 opacity-100"
+                : "border-transparent scale-75 opacity-0"}
+            `}
+          />
+        </button>
+      );
+    });
 
   return (
     <header
@@ -68,7 +108,7 @@ function Header() {
         </div>
 
         {/* Menu */}
-        <nav className="hidden md:flex gap-10">
+        <nav className="hidden lg:flex gap-10">
           {renderMenu()}
         </nav>
 
@@ -76,6 +116,12 @@ function Header() {
         <div className="flex items-center gap-4">
 
           {/* Nút tải CV */}
+          <a
+  href="/cv-nguyen-minh-khanh.pdf"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+>
           <Button
             variant={scrolled ? "outlined" : "contained"}
             startIcon={<DownloadIcon />}
@@ -92,6 +138,7 @@ function Header() {
           >
             Tải CV
           </Button>
+          </a>
 
           {/* Dark mode button */}
           <IconButton

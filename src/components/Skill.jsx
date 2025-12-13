@@ -8,15 +8,15 @@ function Skill() {
   return (
     <section id="skills" className="relative w-full flex pt-12">
       {/* Background */}
-      <div className="absolute inset-0 overflow-hidden bg-linear-to-r from-slate-200 to-gray-100"></div>
+      <div className="absolute inset-0 overflow-hidden bg-linear-to-br from-[#f3f0ff] via-[#f7f6fb] to-[#f7e7f8]"></div>
       <Box
         className="relative w-full max-w mx-auto px-6 md:px-12 mb-24"
         sx={{ flexGrow: 1 }}
       >
         <FadeIn direction="up" delay={0}>
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">Kỹ năng</h2>
-            <span className="text-md text-gray-500">Một số kỹ năng, điểm mạnh và điểm yếu của tôi.</span>
+            <h2 className="text-3xl font-bold mb-2">⚡ Kỹ năng</h2>
+            <span className="text-md text-gray-500">Một số kỹ năng tôi đã học và phát triển.</span>
           </div>
         </FadeIn>
 
@@ -24,36 +24,14 @@ function Skill() {
 
           <FadeIn direction="up" delay={160}>
         {/* CỘT TRÁI */}
-          <Grid size={{ xs: 12, md: 3 }}>
+          <Grid size={{ xs: 12, md: 4 }}>
               <SkillCard 
-                title="Ngôn ngữ và Tester cơ bản"
+                title="💻 Công nghệ"
                 desc={[
-                  "Frontend cơ bản",
-                  "ReactJS",  
                   "JavaScript",
-                  "Html/CSS",                  
-                  "Python",
-                  "Kiểm thử thủ công",
-                  "Viết Test Case",
-                  "Viết Bug Report",
-                  "Kiểm thử giao diện và chức năng"
-                ]}
-              />
-          </Grid>
-          </FadeIn>
-
-          <FadeIn direction="up" delay={160}>
-        {/* CỘT TRÁI */}
-          <Grid size={{ xs: 12, md: 3 }}>
-              <SkillCard 
-                title="Kỹ năng mềm"
-                desc={[
-                  "Tư duy logic tốt",
-                  "Khả năng tự học tốt",
-                  "Làm việc độc lập và làm việc nhóm",
-                  "Quản lý thời gian",
-                  "Khả năng quan sát, chú ý chi tiết",
-                  "Chủ động tìm hiểu và hoàn thành nhiệm vụ"
+                  "ReactJS",
+                  "HTML, CSS, TailwindCSS",
+                  "Python (cơ bản)"
                 ]}
               />
           </Grid>
@@ -61,14 +39,15 @@ function Skill() {
 
           <FadeIn direction="up" delay={200}>
           {/* CỘT GIỮA  */}
-            <Grid size={{ xs: 12, md: 3 }}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <SkillCard 
-                title="Ưu điểm"
+                title="🧪 Kiểm thử"
                 desc={[
-                  "Tỉ mỉ, cẩn thận, cú ý đến chi tiết",
-                  "Trung thực, thẳng thắn",
-                  "Ham học hỏi, tiếp thu nhanh",
-                  "Dễ hòa nhập với môi trường mới sau 1–2 lần tương tác"
+                  "Viết test case thủ công",
+                  "Manual Tsting",
+                  "Ghi nhận và mô tả bug",
+                  "Kiểm thử giao diện",
+                  "Kiểm thử luồng người dùng cơ bản"
                 ]}
               />
           </Grid>
@@ -76,12 +55,14 @@ function Skill() {
 
           <FadeIn direction="up" delay={240}>
           {/* CỘT PHẢI */}
-           <Grid size={{ xs: 12, md: 3 }}>
+           <Grid size={{ xs: 12, md: 4 }}>
               <SkillCard 
-                title="Nhược điểm"
+                title="🛠️ Công cụ"
                 desc={[
-                  "Chưa có nhiều kinh nghiệm thực tế, nhưng đang chủ động tự học thông qua dự án cá nhân",
-                  "Hơi ít nói trong lần tương tác đầu tiên, nhưng dễ hòa nhập và giao tiếp tự nhiên hơn sau khi quen team.",
+                  "Postman",
+                  "Figma",
+                  "Git, GitHub",
+                  "Visual Studio Code"
                 ]}
               />
           </Grid>

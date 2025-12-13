@@ -10,7 +10,7 @@ function Home() {
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/background.jpg"
+          src="/background.png"
           alt="background"
           className="w-full h-full object-cover scale-100"
         />
@@ -35,10 +35,11 @@ function Home() {
             <div className="text-white space-y-2 md:pt-0 pt-12">
               <p className="text-sm">Xin chào! Tôi là</p>
               <h1 className="text-6xl font-bold">Nguyễn Minh Khánh</h1>
-              <p className="text-sm mb-12">Mọi người thường gọi tôi là <span className="text-md text-lg font-bold">Bi</span></p>
+              <p className="text-sm mb-12">Mọi người thường gọi tôi là <span className="text-md text-lg font-bold">Bi 😍</span></p>
               <p className="text-lg">
-                Sinh viên ngành CS tại trường T! Yêu thích các công việc về Tester, Thiết kế giao diện.
-                Luôn khao khát học hỏi những điều mới mẻ mỗi ngày.
+                Sinh viên CS yêu thích test phần mềm và xây dựng giao diện web.
+                <br/>
+                Tò mò - Sáng tạo.
                 </p>
             </div>
             </FadeIn>
@@ -58,7 +59,7 @@ function Home() {
                   blur-2xl 
                   opacity-70
                   animate-pulse
-                  bg-[radial-gradient(circle_at_center,#ff00ff,#00ffff,#0066ff)]
+                  bg-[radial-gradient(circle_at_center,#677381,#82A0AA,#A3CFCD)]
                 "
               ></div>
 
@@ -68,7 +69,8 @@ function Home() {
                   relative
                   w-60 h-60 md:w-70 md:h-70
                   rounded-full overflow-hidden 
-                  shadow-xl border-4 border-white/40
+                  border-4 border-white/40
+                  hover:scale-110 hover:rotate-360 transition-transform duration-300
                 "
               >
                 <img
