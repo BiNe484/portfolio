@@ -11,7 +11,7 @@ export default function App() {
         {/* Layout dùng chung */}
         <Route element={<MainLayout />}>
 
-          <Route path="/" element={<Profile />} />
+          <Route path="/portfolio/" element={<Profile />} />
           {/*<Route path="/about" element={<About />} />*/}
           <Route path="/test" element={<Test />} />
           
