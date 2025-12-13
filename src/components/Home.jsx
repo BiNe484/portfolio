@@ -10,7 +10,7 @@ function Home() {
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/background.png"
+          src="./background.png"
           alt="background"
           className="w-full h-full object-cover scale-100"
         />
@@ -74,7 +74,7 @@ function Home() {
                 "
               >
                 <img
-                  src="/avatar.jpg"
+                  src="./avatar.jpg"
                   alt="avatar"
                   className="w-full h-full object-cover"
                 />
