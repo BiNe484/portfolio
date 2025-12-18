@@ -1,7 +1,11 @@
 @import "tailwindcss";
-* {
+/* * {
   font-family: "Times New Roman", Times, serif;
+} */
+* {
+  font-family: 'Roboto', sans-serif;
 }
+
 .fade-translate-up {
   @apply translate-y-10;
 }

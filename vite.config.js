@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react({
       babel: {
@@ -12,5 +12,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: '/portfolio/',
-})
+    base: mode === 'github'
+    ? '/portfolio/'   // GitHub Pages
+    : '/',            // Vercel
+}))

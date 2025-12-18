@@ -37,7 +37,7 @@ function Home() {
               <h1 className="text-6xl font-bold">Nguyễn Minh Khánh</h1>
               <p className="text-sm mb-12">Mọi người thường gọi tôi là <span className="text-md text-lg font-bold">Bi 😍</span></p>
               <p className="text-lg">
-                Sinh viên CS yêu thích test phần mềm và xây dựng giao diện web.
+                Sinh viên Computer Science yêu thích test phần mềm và xây dựng giao diện web.
                 <br/>
                 Tò mò - Sáng tạo.
                 </p>
@@ -70,7 +70,7 @@ function Home() {
                   w-60 h-60 md:w-70 md:h-70
                   rounded-full overflow-hidden 
                   border-4 border-white/40
-                  hover:scale-110 hover:rotate-360 transition-transform duration-300
+                  hover:scale-110 transition-transform duration-300
                 "
               >
                 <img

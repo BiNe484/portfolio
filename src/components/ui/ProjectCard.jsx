@@ -3,7 +3,7 @@ function ProjectCard({ source, title, desc }) {
     <div className="
     w-full h-full 
     bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg
-    hover:scale-105 transition-transform duration-300">
+    hover:scale-105 hover:rotate-2 transition-transform duration-300">
       
       {/* IMAGE */}
       <div className="w-full h-60 p-4">

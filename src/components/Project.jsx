@@ -45,9 +45,9 @@ function Project() {
           {/* CỘT PHẢI */}
           <FadeIn direction="up" delay={180}>
             <Grid size={{ xs: 12, md: 4 }}>
-              <ProjectCard source={"./game.jpg"} 
-                title="Movie Website" 
-                desc="Phát triển website xem phim bằng ReactJS. Sử dụng API mẫu để hiển thị danh sách phim, chi tiết phim." /> 
+              <ProjectCard source={"./portfolio.png"} 
+                title="Portfolio Website" 
+                desc="Thiết kế và phát triển website cá nhân với ReactJS, Material UI, Tailwind CSS." /> 
             </Grid>
           </FadeIn>
         </Grid>

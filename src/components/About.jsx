@@ -90,11 +90,10 @@ function About() {
                   <div className=" bg-white p-4 rounded-xl shadow-lg h-full mt-4
                   hover:scale-105 transition-transform duration-300">
                     <p className="text-sm text-gray-700 mb-6 text-justify">
-                      Mục tiêu nghề nghiệp của tôi là trở thành một lập trình viên Frontend và một Tester,
-                      có khả năng cả về phát triển giao diện người dùng bắt mắt và kiểm thử phần mềm.
-                      Tôi mong muốn làm việc trong một môi trường sáng tạo,
-                      nơi tôi có thể áp dụng kiến thức để xây dựng các ứng dụng web hiệu quả, thân thiện và mượt mà với người dùng.
-                      Tôi cũng hướng tới việc không ngừng học hỏi và nâng cao kỹ năng của mình để đóng góp tích cực vào sự phát triển của công ty.
+                      Trở thành Frontend Developer có tư duy kiểm thử, 
+                      xây dựng giao diện thân thiện, 
+                      ổn định và hạn chế lỗi, 
+                      đồng thời không ngừng học hỏi để nâng cao kỹ năng phát triển và kiểm thử phần mềm.
                     </p>
                     <div>
                       <p className="text-sm font-bold mt-2">Học vấn</p>

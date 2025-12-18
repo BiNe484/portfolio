@@ -64,10 +64,10 @@ function Footer() {
 
   return (
     <section id="footer">
-      <div className="max-w h-[180px] bg-[#111111] flex flex-col items-center justify-center">
+      <div className="max-w h-60 bg-[#111111] flex flex-col items-center justify-center">
 
         {/* Social Buttons */}
-        <div className="flex gap-4 mb-6">{renderButtons()}</div>
+        <div className="flex gap-4 pb-16">{renderButtons()}</div>
 
         {/* Menu */}
         <div className="flex gap-12 text-sm text-white">{renderMenu()}</div>
