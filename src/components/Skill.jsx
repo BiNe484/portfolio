@@ -31,7 +31,9 @@ function Skill() {
                   "JavaScript",
                   "ReactJS",
                   "HTML, CSS, TailwindCSS",
-                  "Python (cơ bản)"
+                  "Python (cơ bản)",
+                  "C,C#",
+                  "SQL"
                 ]}
               />
           </Grid>
@@ -61,8 +63,10 @@ function Skill() {
                 desc={[
                   "Postman",
                   "Figma",
-                  "Git, GitHub",
-                  "Visual Studio Code"
+                  "Git, GitHub, GitLab",
+                  "Visual Studio Code",
+                  "Unity Engine",
+                  "Microsoft Office (Word, Excel, PowerPoint)"
                 ]}
               />
           </Grid>

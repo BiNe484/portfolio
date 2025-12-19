@@ -1,11 +1,60 @@
 import React from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import FadeIn from "./animation/FadeIn";
 import Box from "@mui/material/Box";
 import SendIcon from "@mui/icons-material/Send";
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 function Contact() {
+  const [snackbar, setSnackbar] = React.useState({
+    open: false,
+    message: "",
+    severity: "success", // success | error | warning | info
+  });
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === "clickaway") return;
+    setSnackbar({ ...snackbar, open: false });
+  };
+
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSnackbar({
+            open: true,
+            message: "Gửi email thành công! Mình sẽ phản hồi sớm nhé.",
+            severity: "success",
+          });
+          formRef.current.reset();
+        },
+        (error) => {
+          setSnackbar({
+            open: true,
+            message: "Gửi email thất bại. Vui lòng thử lại sau.",
+            severity: "error",
+          });
+          console.error(error);
+        }
+      );
+  };
+
+
   return (
     <section id="contact" className="relative w-full flex pt-12">
+
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden bg-linear-to-br from-[#FFF2E0] via-[#f8f1e7] to-[#ebf6fa]" />
 
@@ -24,7 +73,7 @@ function Contact() {
         {/* Form */}
         <FadeIn direction="up" delay={150}>
           <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
-            <form className="flex flex-col gap-5">
+            <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-5">
               {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -32,20 +81,24 @@ function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="from_email"
+                  required
                   placeholder="your@email.com"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black/30"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2"
                 />
               </div>
 
               {/* Subject */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject
+                  Chủ đề
                 </label>
                 <input
                   type="text"
+                  name="subject"
+                  required
                   placeholder="Chủ đề liên hệ"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black/30"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2"
                 />
               </div>
 
@@ -55,9 +108,11 @@ function Contact() {
                   Nội dung
                 </label>
                 <textarea
+                  name="message"
+                  required
                   rows="4"
                   placeholder="Nội dung tin nhắn..."
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-black/30"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-2"
                 />
               </div>
 
@@ -83,6 +138,21 @@ function Contact() {
           </div>
         </FadeIn>
       </Box>
+            <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          variant="filled"
+          sx={{ borderRadius: 2 }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </section>
   );
 }

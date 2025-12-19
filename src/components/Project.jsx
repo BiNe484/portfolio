@@ -24,34 +24,68 @@ function Project() {
         </FadeIn>
         
         <Grid container spacing={4} alignItems="stretch">
-          {/* CỘT TRÁI */}
+
           <FadeIn direction="up" delay={140}>
             <Grid size={{ xs: 12, md: 4 }}>              
               <ProjectCard source={"./POS.png"} 
-                title="Web POS System" 
-                desc="Tham gia thiết kế giao diện Admin Dashboard, kiểm thử các chức năng chính: thêm/sửa/xóa sản phẩm, đăng nhập, phân quyền." />
+                title="Cosmetic POS Website System" 
+                desc="Tham gia thiết kế giao diện Admin Dashboard, kiểm thử các chức năng chính: thêm/sửa/xóa sản phẩm, đăng nhập, phân quyền."
+                language="ReactJS Vite, Nodejs, TypeScript, HTML/CSS, TailwindCSS, MongoDB, MuiUI" />
             </Grid>
           </FadeIn>
 
-          {/* CỘT Giữa */}
+
           <FadeIn direction="up" delay={160}>
             <Grid size={{ xs: 12, md: 4 }}>            
               <ProjectCard source={"./game.jpg"} 
-                title="Game Project" 
-                desc="Tham gia thiết kế gameplay và giao diện cơ bản cho trò chơi. Thực hiện kiểm thử thủ công trong quá trình phát triển." />
+                title="Unity Engine Project" 
+                desc="Tham gia thiết kế gameplay, giao diện và phát triển trò chơi. Thực hiện kiểm thử thủ công trong quá trình phát triển."
+                language="Unity Engine, C#, Firebase" />
             </Grid>
           </FadeIn>
 
-          {/* CỘT PHẢI */}
+
           <FadeIn direction="up" delay={180}>
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./portfolio.png"} 
                 title="Portfolio Website" 
-                desc="Thiết kế và phát triển website cá nhân với ReactJS, Material UI, Tailwind CSS." /> 
+                desc="Thiết kế và phát triển website cá nhân với ReactJS, Material UI, Tailwind CSS."
+                language="ReactJS Vite, JavaScript, HTML, CSS, TailwindCSS, MuiUI" />
             </Grid>
           </FadeIn>
-        </Grid>
 
+
+          <FadeIn direction="up" delay={200}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <ProjectCard source={"./android.png"} 
+                title="Mobile Banking" 
+                desc="Tham gia thiết kế và phát triển ứng dụng điện thoại để mô phỏng luồng làm việc, chức năng của một app ngân hàng hiện nay."
+                language="Android Studio, Java" />
+            </Grid>
+          </FadeIn>
+
+                  
+
+          <FadeIn direction="up" delay={220}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <ProjectCard source={"./godot.png"} 
+                title="Godot Engine Project" 
+                desc="Thiết kế game hành động 2D đơn giản, áp dụng vật lý 2D, animation, AI cơ bản và hệ thống UI."
+                language="Godot Engine, GDScript" />
+            </Grid>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={220}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <ProjectCard source={"./tasmana.png"} 
+                title="Company Management" 
+                desc="Tham gia thiết kế, phát triển và kiểm thử phần mềm quản lý công việc với các chức năng quản lý
+                công ty, dân cư, tạo báo cáo. Tích hợp AI nhận diện khuôn mặt để mở khóa phần mềm."
+                language="C#, ADO.NET, SQL Server" /> 
+            </Grid>
+          </FadeIn>
+
+        </Grid>
       </Box>
     </section>
   );

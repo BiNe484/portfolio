@@ -23,7 +23,7 @@ function Certificate() {
           </div>
         </FadeIn>
         
-        <Grid container spacing={4} alignItems="stretch">
+        <Grid container spacing={4} alignItems="stretch" className="justify-center">
           {/* CỘT TRÁI */}
           <FadeIn direction="up" delay={140}>
             <Grid size={{ xs: 12, md: 4 }}>                
@@ -31,21 +31,21 @@ function Certificate() {
             </Grid>
         </FadeIn>
 
-          {/* CỘT Giữa */}
+          {/*
           <FadeIn direction="up" delay={160}>
             <Grid size={{ xs: 12, md: 4 }}>                
                 <CertificateCard source={"./nothing.png"} title="Tiếng Trung" desc="Chứng chỉ HSK (Hanyu Shuiping Kaoshi / 汉语水平考试)" />                
             </Grid>
         </FadeIn>
 
-          {/* CỘT PHẢI */}
+
           <FadeIn direction="up" delay={180}>
             <Grid size={{ xs: 12, md: 4 }}>            
                 <CertificateCard source={"./nothing.png"} title="Tiếng Anh" desc="Chứng chỉ PET (Preliminary English Test) cấp B1" />            
             </Grid>
           </FadeIn>
+          */}
         </Grid>
-
       </Box>
     </section>
   );

@@ -1,4 +1,4 @@
-function ProjectCard({ source, title, desc }) {
+function ProjectCard({ source, title, desc, language }) {
   return (
     <div className="
     w-full h-full 
@@ -21,6 +21,9 @@ function ProjectCard({ source, title, desc }) {
         </h3>
         <p className="text-sm text-gray-600">
           {desc}
+        </p>
+        <p className="text-sm text-gray-400 pt-2">
+          {language}
         </p>
       </div>
 
