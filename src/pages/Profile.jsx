@@ -7,6 +7,7 @@ import Skill from '../components/Skill.jsx'
 import Project from '../components/Project.jsx'
 import Contact from '../components/Contact.jsx'
 import Certificate from '../components/Certificate.jsx'
+import BoxChat from '../components/BoxChat.jsx';
 
 
 export default function Profile() {
@@ -19,6 +20,7 @@ export default function Profile() {
     <Certificate/>
     <Project/>
     <Contact/>
+    <BoxChat/>
   </>
   )
 }

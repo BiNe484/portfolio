@@ -29,10 +29,10 @@ function Skill() {
                 title="💻 Công nghệ"
                 desc={[
                   "JavaScript",
-                  "ReactJS",
-                  "HTML, CSS, TailwindCSS",
-                  "Python (cơ bản)",
-                  "C,C#",
+                  "ReactJS, TailwindCSS, MUI",
+                  "HTML, CSS",
+                  "Python",
+                  "C, C#",
                   "SQL"
                 ]}
               />

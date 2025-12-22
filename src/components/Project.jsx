@@ -25,7 +25,7 @@ function Project() {
         
         <Grid container spacing={4} alignItems="stretch">
 
-          <FadeIn direction="up" delay={140}>
+          <FadeIn direction="up" delay={100}>
             <Grid size={{ xs: 12, md: 4 }}>              
               <ProjectCard source={"./POS.png"} 
                 title="Cosmetic POS Website System" 
@@ -45,7 +45,7 @@ function Project() {
           </FadeIn>
 
 
-          <FadeIn direction="up" delay={180}>
+          <FadeIn direction="up" delay={220}>
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./portfolio.png"} 
                 title="Portfolio Website" 
@@ -55,7 +55,7 @@ function Project() {
           </FadeIn>
 
 
-          <FadeIn direction="up" delay={200}>
+          <FadeIn direction="up" delay={100}>
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./android.png"} 
                 title="Mobile Banking" 
@@ -66,7 +66,7 @@ function Project() {
 
                   
 
-          <FadeIn direction="up" delay={220}>
+          <FadeIn direction="up" delay={160}>
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./godot.png"} 
                 title="Godot Engine Project" 
