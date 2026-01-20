@@ -5,11 +5,11 @@ import Skill from '../components/Skill.jsx'
 import Project from '../components/Project.jsx'
 import Contact from '../components/Contact.jsx'
 
-export default function Profile() {
+export default function Test() {
   return (
   <>
     <div className='w-full h-screen'>
-    page test không có nôi dung
+    layout test không có nội dung
     </div>
   </>
   )
