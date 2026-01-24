@@ -29,7 +29,7 @@ export default function ToTop() {
       onClick={scrollToTop}
       className={`
         fixed bottom-6 right-6 z-50 
-        bg-black/60 hover:bg-black/80 
+        bg-white/30 hover:bg-black/80 
         text-white p-3 rounded-full shadow-xl 
         transition-all duration-300
         ${visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}

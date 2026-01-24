@@ -56,27 +56,27 @@ function Contact() {
     <section id="contact" className="relative w-full flex pt-12">
 
       {/* Background */}
-      <div className="absolute inset-0 overflow-hidden bg-linear-to-br from-[#FFF2E0] via-[#f8f1e7] to-[#ebf6fa]" />
+      <div className="absolute inset-0 overflow-hidden bg-[#0F0F0F]" />
 
       {/* Nội dung */}
       <Box className="relative w-full max-w mx-auto px-6 mb-24">
         {/* Title */}
         <FadeIn direction="up">
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">📞 Liên hệ</h2>
+            <h2 className="text-gray-200 text-3xl font-bold mb-2">Contact Me</h2>
             <span className="text-md text-gray-500 text-center">
-              Liên hệ với tôi nếu bạn có bất kỳ câu hỏi hay cơ hội hợp tác nào nhé.
+              Contact me if you have any questions or collaboration opportunities.
             </span>
           </div>
         </FadeIn>
 
         {/* Form */}
         <FadeIn direction="up" delay={150}>
-          <div className="max-w-xl mx-auto bg-white rounded-2xl shadow-2xl p-8">
+          <div className="max-w-xl mx-auto bg-[#0F0F0F] border border-gray-800 rounded-2xl p-8">
             <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-5">
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-400 mb-1">
                   Email
                 </label>
                 <input
@@ -84,35 +84,35 @@ function Contact() {
                   name="from_email"
                   required
                   placeholder="your@email.com"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                  className="text-gray-300 w-full rounded-lg border border-gray-300 px-4 py-2"
                 />
               </div>
 
               {/* Subject */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Chủ đề
+                <label className="block text-sm font-medium text-gray-400 mb-1">
+                  Subject
                 </label>
                 <input
                   type="text"
                   name="subject"
                   required
-                  placeholder="Chủ đề liên hệ"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                  placeholder="Subject..."
+                  className="text-gray-300 w-full rounded-lg border border-gray-300 px-4 py-2"
                 />
               </div>
 
               {/* Content */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Nội dung
+                <label className="block text-sm font-medium text-gray-400 mb-1">
+                  Content
                 </label>
                 <textarea
                   name="message"
                   required
                   rows="4"
-                  placeholder="Nội dung tin nhắn..."
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                  placeholder="Message content..."
+                  className="text-gray-300 w-full rounded-lg border border-gray-300 px-4 py-2"
                 />
               </div>
 
@@ -120,13 +120,13 @@ function Contact() {
               <button
                 type="submit"
                 className="
-                  group mt-2 w-full bg-black text-white py-3 rounded-lg
+                  group mt-2 w-full bg-white/10 text-white py-3 rounded-lg
                   font-medium transition flex items-center justify-center
                 "
               >
                 {/* Text */}
                 <span className="group-hover:opacity-0 transition-opacity duration-200">
-                  Gửi liên hệ
+                  Send
                 </span>
 
                 {/* Icon */}

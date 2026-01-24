@@ -63,7 +63,7 @@ return (
       <div 
         className="
           max-w 
-          bg-[#111111] 
+          bg-[#1b1b1b] 
           flex flex-col 
           items-center 
           justify-center 

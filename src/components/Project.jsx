@@ -8,7 +8,7 @@ function Project() {
   return (
     <section id="projects" className="relative w-full flex pt-12">
       {/* Background */}
-      <div className="absolute inset-0 overflow-hidden bg-linear-to-r from-[#edf7f7] to-[#fbe3f3]">
+      <div className="absolute inset-0 overflow-hidden bg-[#0F0F0F]">
 
       </div>
       {/* Nội dung */}
@@ -18,8 +18,8 @@ function Project() {
       >
         <FadeIn direction="up" delay={0}>
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">📂 Dự án</h2>
-            <span className="text-md text-gray-500">Một số dự án thiết kế giao diện và phát triển phần mềm từng tham gia.</span>
+            <h2 className="text-gray-200 text-3xl font-bold mb-2">Projects</h2>
+            <span className="text-md text-gray-500 text-center">Some of the UI design and software development projects I have participated in.</span>
           </div>
         </FadeIn>
         
@@ -29,8 +29,8 @@ function Project() {
             <Grid size={{ xs: 12, md: 4 }}>              
               <ProjectCard source={"./POS.png"} 
                 title="Cosmetic POS Website System" 
-                desc="Tham gia thiết kế giao diện Admin Dashboard, kiểm thử các chức năng chính: thêm/sửa/xóa sản phẩm, đăng nhập, phân quyền."
-                language="ReactJS Vite, Nodejs, TypeScript, HTML/CSS, TailwindCSS, MongoDB, MuiUI" />
+                desc="Participated in designing the Admin Dashboard interface and testing core functionalities, including product creation, editing, deletion, authentication, and role-based access control."
+                language="ReactJS Vite, Nodejs, TypeScript, TailwindCSS, MongoDB, Material UI" />
             </Grid>
           </FadeIn>
 
@@ -39,7 +39,7 @@ function Project() {
             <Grid size={{ xs: 12, md: 4 }}>            
               <ProjectCard source={"./game.jpg"} 
                 title="Unity Engine Project" 
-                desc="Tham gia thiết kế gameplay, giao diện và phát triển trò chơi. Thực hiện kiểm thử thủ công trong quá trình phát triển."
+                desc="Participated in designing gameplay, UI, and developing the game. Conducted manual testing during development."
                 language="Unity Engine, C#, Firebase" />
             </Grid>
           </FadeIn>
@@ -49,8 +49,8 @@ function Project() {
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./portfolio.png"} 
                 title="Portfolio Website" 
-                desc="Thiết kế và phát triển website cá nhân với ReactJS, Material UI, Tailwind CSS."
-                language="ReactJS Vite, JavaScript, HTML, CSS, TailwindCSS, MuiUI" />
+                desc="Designed and developed a personal portfolio website using ReactJS, Material UI, and Tailwind CSS."
+                language="ReactJS Vite, JavaScript, TailwindCSS, Material UI" />
             </Grid>
           </FadeIn>
 
@@ -59,7 +59,7 @@ function Project() {
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./android.png"} 
                 title="Mobile Banking" 
-                desc="Tham gia thiết kế và phát triển ứng dụng điện thoại để mô phỏng luồng làm việc, chức năng của một app ngân hàng hiện nay."
+                desc="Participated in designing and developing a mobile application to simulate the workflow and functions of a current banking app."
                 language="Android Studio, Java" />
             </Grid>
           </FadeIn>
@@ -70,7 +70,7 @@ function Project() {
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./godot.png"} 
                 title="Godot Engine Project" 
-                desc="Thiết kế game hành động 2D đơn giản, áp dụng vật lý 2D, animation, AI cơ bản và hệ thống UI."
+                desc="Designed a simple 2D action game, applying 2D physics, animation, basic AI, and UI system."
                 language="Godot Engine, GDScript" />
             </Grid>
           </FadeIn>
@@ -79,9 +79,8 @@ function Project() {
             <Grid size={{ xs: 12, md: 4 }}>
               <ProjectCard source={"./tasmana.png"} 
                 title="Company Management" 
-                desc="Tham gia thiết kế, phát triển và kiểm thử phần mềm quản lý công việc với các chức năng quản lý
-                công ty, dân cư, tạo báo cáo. Tích hợp AI nhận diện khuôn mặt để mở khóa phần mềm."
-                language="C#, ADO.NET, SQL Server" /> 
+                desc="Participated in designing, developing and testing a company management software with features for managing companies, residents, and generating reports. Integrated facial recognition AI to unlock the software."
+                language="C#, ADO.NET, SQL Server" />
             </Grid>
           </FadeIn>
 

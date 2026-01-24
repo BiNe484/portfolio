@@ -6,24 +6,24 @@ import SendIcon from "@mui/icons-material/Send";
 
 const fakeKnowledge = [
   {
-    keywords: ["bạn là ai", "giới thiệu"],
+    keywords: ["who are you", "introduce"],
     answer:
-      "Mình là AI assistant của portfolio này. Mình chỉ trả lời các câu hỏi liên quan đến Nguyễn Minh Khánh 😄",
+      "I am the AI assistant of this portfolio. I only answer questions related to Nguyen Minh Khanh 😄",
   },
   {
-    keywords: ["kỹ năng", "skill"],
+    keywords: ["skills", "skill"],
     answer:
-      "Khánh có kinh nghiệm với React, Tailwind, MUI, Unity và Godot.",
+      "Khanh has experience with React, Tailwind, MUI, Unity and Godot.",
   },
   {
-    keywords: ["dự án", "project"],
+    keywords: ["projects", "project"],
     answer:
-      "Một số dự án nổi bật: Portfolio cá nhân, game nhỏ với Unity/Godot, và các UI frontend React.",
+      "Some notable projects: Personal portfolio, small games with Unity/Godot, and React frontend UIs.",
   },
   {
-    keywords: ["liên hệ", "contact"],
+    keywords: ["contact"],
     answer:
-      "Bạn có thể sử dụng form ở cuối trang để liên hệ với Nguyễn Minh Khánh.",
+      "You can use the form at the bottom of the page to contact Nguyen Minh Khanh.",
   },
 ];
 
@@ -33,7 +33,7 @@ function BoxChat() {
     const [messages, setMessages] = useState([
         {
         sender: "ai",
-        text: "Xin chào 👋\nBạn có thể hỏi mình về portfolio này!",
+        text: "Hello 👋\nYou can ask me about this portfolio!",
         },
     ]);
 
@@ -44,7 +44,7 @@ function BoxChat() {
         );
         return (
         found?.answer ||
-        "Xin lỗi 😅 mình chỉ là fake reply thôi.\nMình chỉ trả lời khi bạn nhập đúng các từ khoá nội bộ (ví dụ: giới thiệu, kỹ năng, dự án, liên hệ).\nMong bạn thông cảm nhé!"
+        "I'm sorry 😅 I'm just a fake reply.\nI only answer when you enter the correct internal keywords (e.g., introduce, skills, projects, contact).\nPlease understand!"
         );
     };
 
@@ -52,7 +52,7 @@ function BoxChat() {
         if (!input.trim()) return;
 
         const userMessage = { sender: "user", text: input };
-        const thinkingMessage = { sender: "ai", text: "Đang suy nghĩ..." };
+        const thinkingMessage = { sender: "ai", text: "Thinking..." };
 
         setMessages((prev) => [...prev, userMessage, thinkingMessage]);
         setInput("");
@@ -80,7 +80,7 @@ function BoxChat() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-blue-500 hover:bg-blue-600 flex items-center justify-center shadow-lg"
+          className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-blue-500 hover:bg-blue-600 flex items-center justify-center"
         >
           <ChatBubbleOutlineIcon className="text-white" />
         </button>
@@ -88,7 +88,7 @@ function BoxChat() {
 
       {/* CHAT BOX */}
       {open && (
-        <div className="fixed bottom-6 left-6 z-50 w-80 h-[420px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed bottom-6 left-6 z-50 w-80 h-[420px] bg-black rounded-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-blue-500">
             <span className="text-white font-medium">AI Assistant</span>
@@ -106,7 +106,7 @@ function BoxChat() {
                   ${
                     msg.sender === "user"
                       ? "bg-blue-500 text-white ml-auto"
-                      : "bg-gray-100 text-gray-700"
+                      : "bg-white/70 text-gray-700"
                   }`}
               >
                 {msg.text}
@@ -115,15 +115,15 @@ function BoxChat() {
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t flex items-center gap-2">
+          <div className="bg-white/10 p-3 border-t flex items-center gap-2">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
-              placeholder="Nhập câu hỏi..."
-              className="flex-1 px-3 py-2 text-sm border rounded-lg outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Enter..."
+              className="flex-1 px-3 py-2 text-white text-sm rounded-lg bg-white/10 outline-none focus:ring-2 focus:ring-blue-400"
             />
-            <IconButton onClick={handleSend}>
+            <IconButton onClick={handleSend} color="primary">
               <SendIcon />
             </IconButton>
           </div>

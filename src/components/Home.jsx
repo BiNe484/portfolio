@@ -1,9 +1,38 @@
 import React from "react";
 import FadeIn from "./animation/FadeIn";
+import AvatarFrame from "./ui/AvatarFrame";
+import TechCard from "./ui/Techcard";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import ReactJSIcon from "../assets/icons/reactjs.png";
+import TailwindIcon from "../assets/icons/tailwindcss.png";
+import JavaScriptIcon from "../assets/icons/javascript.png";
+import FigmaIcon from "../assets/icons/figma.png";
+import GitIcon from "../assets/icons/git.png";
 
 function Home() {
+  const techList = [
+  {
+    name: "React",
+    icon: ReactJSIcon,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: TailwindIcon,
+  },
+  {
+    name: "JavaScript",
+    icon: JavaScriptIcon,
+  },
+  {
+    name: "Figma",
+    icon: FigmaIcon,
+  },
+  {
+    name: "Git",
+    icon: GitIcon,
+  },
+];
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center">
       
@@ -32,15 +61,13 @@ function Home() {
           {/* BÊN TRÁI*/}
           <Grid size={{xs:12, md:6}}>
             <FadeIn direction="up">
-            <div className="text-white space-y-2 md:pt-0 pt-12">
-              <p className="text-sm">Xin chào! Tôi là</p>
-              <h1 className="text-6xl font-bold">Nguyễn Minh Khánh</h1>
-              <p className="text-sm mb-12">Mọi người thường gọi tôi là <span className="text-md text-lg font-bold">Bi 😍</span></p>
-              <p className="text-lg">
-                Sinh viên Computer Science yêu thích test phần mềm và xây dựng giao diện web.
-                <br/>
-                Tò mò - Sáng tạo.
-                </p>
+            <div className="text-white space-y-2 md:pt-0 pt-24">
+              <p className="text-xl">Hello! I'm</p>
+              <h1 className="text-5xl font-bold">Nguyễn Minh Khánh</h1>
+              <p className="text-xl">Front-End Developer Intern</p>
+              <p className="text-lg pt-6 text-justify">
+                I  am  a  Computer  Science  undergraduate  with  a  strong  interest  in Frontend Development. I have a solid foundation in web technologies and  experience  building  user  interfaces  using  modern  frameworks.  I am  detail-oriented,  eager  to  learn,  and  motivated  to  improve  my technical  skills  through  real-world  projects  and  internship opportunities.
+              </p>
             </div>
             </FadeIn>
           </Grid>
@@ -48,43 +75,39 @@ function Home() {
           {/* BÊN PHẢI*/}
           <Grid size={{ xs: 12, md: 6 }}>
             <FadeIn direction="up">
-            <div className="flex justify-center items-center relative">
-              
-              {/* Glow*/}
-              <div
-                className="
-                  absolute 
-                  w-80 h-80 md:w-100 md:h-100 
-                  rounded-full 
-                  blur-2xl 
-                  opacity-70
-                  animate-pulse
-                  bg-[radial-gradient(circle_at_center,#677381,#82A0AA,#A3CFCD)]
-                "
-              ></div>
-
-              {/* Avatar */}
-              <div
-                className="
-                  relative
-                  w-60 h-60 md:w-70 md:h-70
-                  rounded-full overflow-hidden 
-                  border-4 border-white/40
-                  hover:scale-110 transition-transform duration-300
-                "
-              >
-                <img
-                  src="./avatar.jpg"
-                  alt="avatar"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-            </div>
+              <div className="">
+                <AvatarFrame/>
+              </div>              
             </FadeIn>
           </Grid>
         </Grid>
       </Box>
+      <FadeIn direction="up" delay={200}>
+          <div
+            className="
+              absolute bottom-6 left-0 w-full
+              flex flex-wrap
+              justify-center
+              gap-4
+              px-6
+            "
+          >
+            {techList.map((tech) => (
+              <TechCard
+                key={tech.name}
+                icon={
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="w-5 h-5"
+                  />
+                }
+                name={tech.name}
+              />
+            ))}
+
+          </div>
+      </FadeIn>
     </section>
   );
 }

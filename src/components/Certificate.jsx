@@ -8,7 +8,7 @@ function Certificate() {
   return (
     <section id="certificates" className="relative w-full flex pt-12">
       {/* Background */}
-      <div className="absolute inset-0 overflow-hidden bg-linear-to-br from-[#FFF2E0] via-[#f8f1e7] to-[#ebf6fa]">
+      <div className="absolute inset-0 overflow-hidden bg-[#0F0F0F]">
 
       </div>
       {/* Nội dung */}
@@ -18,8 +18,8 @@ function Certificate() {
       >
         <FadeIn direction="up" delay={0}>
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">📜 Chứng chỉ</h2>
-            <span className="text-md text-gray-500">Một số chứng chỉ đã đạt được.</span>
+            <h2 className="text-gray-200 text-3xl font-bold mb-2">Certificates</h2>
+            <span className="text-md text-gray-500">Some of the certificates I have achieved.</span>
           </div>
         </FadeIn>
         
@@ -27,7 +27,7 @@ function Certificate() {
           {/* CỘT TRÁI */}
           <FadeIn direction="up" delay={140}>
             <Grid size={{ xs: 12, md: 4 }}>                
-                <CertificateCard source={"./PET.png"} title="Tiếng Anh" desc="Chứng chỉ PET B1 (Preliminary English Test)" />                
+                <CertificateCard source={"./PET.png"} title="English" desc="PET B1 (Preliminary English Test)" />                
             </Grid>
         </FadeIn>
 

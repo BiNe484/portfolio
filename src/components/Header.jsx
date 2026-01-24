@@ -68,14 +68,14 @@ function Header() {
         className={`
           fixed top-0 left-0 w-full z-50 transition-all duration-300
           backdrop-blur-sm
-          ${scrolled ? "bg-white/80 shadow-2xl" : "bg-white/10"}
+          ${scrolled ? "bg-white/20 shadow-2xl" : "bg-white/10"}
         `}
       >
         <div className="max-w mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
           <span
             className={`text-lg font-semibold transition ${
-              scrolled ? "text-black" : "text-white"
+              scrolled ? "text-gray-100" : "text-white"
             }`}
           >
             Nguyễn Minh Khánh
@@ -96,7 +96,7 @@ function Header() {
                   onClick={() => scrollToSection(item.id)}
                   className={`
                     relative px-3 py-1 font-medium transition
-                    ${scrolled ? "text-gray-800" : "text-white"}
+                    ${scrolled ? "text-gray-400" : "text-white"}
                     ${isActive ? "text-blue-500" : "hover:text-blue-400"}
                   `}
                 >
@@ -130,21 +130,21 @@ function Header() {
                   startIcon={<DownloadIcon />}
                   sx={{
                     textTransform: "none",
-                    color: scrolled ? "#000" : "#fff",
-                    borderColor: scrolled ? "#000" : "rgba(255,255,255,0.7)",
+                    color: scrolled ? "#fff" : "#fff",
+                    borderColor: scrolled ? "#fff" : "rgba(255,255,255,0.7)",
                     backgroundColor: scrolled
                       ? "transparent"
                       : "rgba(255,255,255,0.15)",
                   }}
                 >
-                  Tải CV
+                  Download CV
                 </Button>
               </a>
 
             {/* Mobile dropdown icon – chỉ khi menu ẩn */}
             <IconButton
               onClick={() => setMobileOpen(!mobileOpen)}
-              sx={{ color: scrolled ? "black" : "white",
+              sx={{ color: scrolled ? "white" : "white",
                 display: { md: "inline-flex", lg: "none" }
               }}
             >
@@ -160,7 +160,7 @@ function Header() {
           className={`
             fixed top-[62px] left-0 w-full z-40
             backdrop-blur-sm
-            ${scrolled ? "bg-white/80" : "bg-white/10"}
+            ${scrolled ? "bg-white/20" : "bg-white/10"}
             shadow-2xl
             flex flex-col items-center gap-6
             py-8
@@ -180,7 +180,7 @@ function Header() {
                   activeSection === item.id
                     ? "text-blue-500"
                     : scrolled
-                    ? "text-gray-800 hover:text-blue-400"
+                    ? "text-white/50 hover:text-blue-400"
                     : "text-white hover:text-blue-300"
                 }
               `}

@@ -13,7 +13,7 @@ import BoxChat from '../components/BoxChat.jsx';
 export default function Profile() {
   return (
   <>
-    <MouseFollower />
+    {/*<MouseFollower />*/}
     <Home/>
     <About/>
     <Skill/>

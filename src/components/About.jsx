@@ -1,6 +1,5 @@
 import React from "react";
 import FadeIn from "./animation/FadeIn";
-import AdvantageCard from "./ui/AdvantageCard";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import MailOutlineSharpIcon from '@mui/icons-material/MailOutlineSharp';
@@ -12,9 +11,9 @@ function About() {
   
   // list
   const menuList = [
-    {id: 1, icon: CalendarTodaySharpIcon, label: "Ngày sinh", content: "04/08/2004" },
+    {id: 1, icon: CalendarTodaySharpIcon, label: "Date of birth", content: "04/08/2004" },
     {id: 2, icon: MailOutlineSharpIcon, label: "Email", content: "minhkhanh484.work@gmail.com" },
-    {id: 3, icon: LocalPhoneOutlinedIcon, label: "Số điện thoại", content: "0334437312" },
+    {id: 3, icon: LocalPhoneOutlinedIcon, label: "Phone number", content: "0334437312" },
     {id: 4, icon: FacebookOutlinedIcon, label: "Facebook", content: "https://www.facebook.com/nguyen.minh.khanh.410853", href: "https://www.facebook.com/nguyen.minh.khanh.410853" },
   ];
 
@@ -43,7 +42,7 @@ function About() {
   return (
     <section id="about" className="relative w-full flex pt-12">
       {/* Background */}
-      <div className="absolute inset-0 overflow-hidden bg-linear-to-br from-[#fef0fb] via-[#f9f9fe] to-[#dfe1ff]">
+      <div className="absolute inset-0 overflow-hidden bg-[#0F0F0F]">
 
       </div>
       {/* Nội dung */}
@@ -52,9 +51,9 @@ function About() {
         sx={{ flexGrow: 1 }}
       >
         <FadeIn direction="up" delay={0}>
-          <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold mb-2">🧑‍💻 Về tôi</h2>
-            <span className="text-md text-gray-500">Thông tin cá nhân và mục tiêu nghề nghiệp.</span>
+          <div className="flex flex-col items-center mb-12 ">
+            <h2 className="text-3xl font-bold mb-2 text-gray-200">About Me</h2>
+            <span className="text-md text-gray-500">Personal information and career goals.</span>
           </div>
         </FadeIn>
         
@@ -68,12 +67,14 @@ function About() {
           {/* BÊN TRÁI*/}
           <FadeIn direction="left" delay={100}>
             <Grid size={{xs:12, md:6}}>            
-                <div className="relative bg-white/80 p-6 rounded-xl shadow-2xl h-full">
-                <p className="text-gray-800 text-md font-bold">Thông tin cá nhân</p>
+                <div className="relative border-gray-800 border bg-gray-800/10 p-6 h-full">
+                <p className="text-white text-md font-bold ">Personal Information</p>
                   {/* Khung trên*/}
-                  <div className=" bg-white p-4 rounded-xl shadow-lg h-full mt-4
-                  hover:scale-105 transition-transform duration-300">
-                    <ul className="list-none pl-2 text-gray-700 wrap-break-word">
+                  <div className="backdrop-blur-md border-gray-800 border p-4 h-full mt-4
+                  hover:scale-105 hover:bg-gray-800/50
+                  hover:shadow-2xl hover:shadow-purple-700/20
+                  transition-transform duration-300">
+                    <ul className="list-none pl-2 text-gray-200 wrap-break-word">
                       {renderList()}
                     </ul>
                   </div>
@@ -84,57 +85,33 @@ function About() {
           {/* BÊN PHẢI*/}
           <FadeIn direction="right" delay={100}>
             <Grid size={{ xs: 12, md: 6 }}>            
-                <div className="relative bg-white/80 p-6 rounded-xl shadow-2xl h-full">
-                <p className="text-gray-800 text-md font-bold">Mục tiêu nghề nghiệp</p>
+                <div className="relative border-gray-800 border bg-gray-800/10 p-6 h-full">
+                <p className="text-white text-md font-bold">Career Goals</p>
                   {/* Khung trên*/}
-                  <div className=" bg-white p-4 rounded-xl shadow-lg h-full mt-4
-                  hover:scale-105 transition-transform duration-300">
-                    <p className="text-sm text-gray-700 mb-6 text-justify">
-                      Trở thành Frontend Developer có tư duy kiểm thử, 
-                      xây dựng giao diện thân thiện, 
-                      ổn định và hạn chế lỗi, 
-                      đồng thời không ngừng học hỏi để nâng cao kỹ năng phát triển và kiểm thử phần mềm.
+                  <div className="backdrop-blur-md border-gray-800 border p-4 h-full mt-4
+                  hover:scale-105 hover:bg-gray-800/50
+                  hover:shadow-2xl hover:shadow-purple-700/20
+                  transition-transform duration-300">
+                    <p className="text-sm text-gray-200 mb-6 text-justify">
+                      Aspire  to  become  a  skilled  Frontend  Developer  specializing  in 
+                      responsive, user-friendly web apps using technologies like React.js and 
+                      Tailwind  CSS.  As  a  Frontend  Intern,  eager  to  apply  academic 
+                      knowledge  and  project  experience  in  real-world  projects,  contribute 
+                      meaningfully  under  professional  guidance,  gain  hands-on  experience, 
+                      and continuously learn to grow into a competent developer. Available 
+                      and committed to a 4-5 month internship, flexible full-time or part-time 
+                      based on company needs.
                     </p>
                     <div>
-                      <p className="text-sm font-bold mt-2">Học vấn</p>
-                      <div className="text-xs text-gray-500 bg-gray-100 rounded-2xl p-4 mt-2">
-                        <p className="font-bold">Công nghệ thông tin</p>
-                        <p>2022 - 2026: Sinh viên ngành Khoa học máy tính, Trường Đại học Tôn Đức Thắng (TDTU)</p>
+                      <p className="text-gray-200 text-sm font-bold mt-2">Education</p>
+                      <div className="text-gray-300 text-xs backdrop-blur-md border-gray-800 border rounded-xl p-4 mt-2">
+                        <p className="font-bold">Computer Science</p>
+                        <p>2022 - 2026: Bachelor of Computer Science at Ton Duc Thang University (TDTU)</p>
                       </div>
                     </div>
                   </div>
                 </div>
             </Grid>
-          </FadeIn>
-
-          {/* Kỹ năng mềm */}
-
-          {/* Ưu điểm */}
-          <FadeIn direction="left" delay={100}>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <AdvantageCard 
-              title="😆 Ưu điểm"                 
-              desc={[
-                    "Làm việc độc lập và làm việc nhóm",
-                    "Khả năng tự học tốt",               
-                    "Khả năng quan sát, chú ý chi tiết",
-                    "Trung thực, thẳng thắn",
-                    "Tư duy kiểm thử khi làm giao diện",
-                    "Sáng tạo trong bố cục và trải nghiệm người dùng"
-                  ]}/>
-          </Grid>
-          </FadeIn>
-
-          {/* Nhược điểm */}
-          <FadeIn direction="right" delay={100}>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <AdvantageCard 
-              title="🫣 Nhược điểm"                
-              desc={[
-                    "Ban đầu hơi trầm khi làm việc với người mới, nhưng giao tiếp rất tốt sau khi đã quen và làm việc chung",
-                    "Chưa có nhiều kinh nghiệm thực tế, nhưng chủ động học và cải thiện mỗi ngày"
-                  ]}/>
-          </Grid>
           </FadeIn>
         </Grid>
       </Box>

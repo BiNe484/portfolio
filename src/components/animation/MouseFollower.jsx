@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 
 function MouseFollower() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -16,16 +15,17 @@ function MouseFollower() {
     <div
       className="
         fixed
-        w-6 h-6
+        w-20 h-20
         rounded-full
-        bg-[radial-gradient(circle_at_center,#677381,#FF5D90,#F458FF)]
-        blur-md
         pointer-events-none
         z-9999
+        backdrop-blur-sm
+        ring-04 ring-white/10
+        shadow-lg shadow-white/20        
       "
       style={{
-        left: pos.x - 12,
-        top: pos.y - 12,
+        left: pos.x - 40,
+        top: pos.y - 40,
       }}
     />
   );
