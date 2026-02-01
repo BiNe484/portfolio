@@ -64,9 +64,9 @@ function Home() {
             <div className="text-white space-y-2 md:pt-0 pt-24">
               <p className="text-xl">Hello! I'm</p>
               <h1 className="text-5xl font-bold">Nguyễn Minh Khánh</h1>
-              <p className="text-xl">Front-End Developer Intern</p>
+              <p className="text-xl">IT Intern</p>
               <p className="text-lg pt-6 text-justify">
-                I  am  a  Computer  Science  undergraduate  with  a  strong  interest  in Frontend Development. I have a solid foundation in web technologies and  experience  building  user  interfaces  using  modern  frameworks.  I am  detail-oriented,  eager  to  learn,  and  motivated  to  improve  my technical  skills  through  real-world  projects  and  internship opportunities.
+                I am a Computer Science undergraduate with a strong interest in game development and interactive applications. I have a solid foundation in programming through academic projects and hands-on experience with web and mobile applications. I possess basic knowledge of game development using Unity and Godot, including gameplay logic, interactive scenes, and application structure. I am eager to learn, receptive to feedback, and motivated to continuously improve through real-world game projects.
               </p>
             </div>
             </FadeIn>

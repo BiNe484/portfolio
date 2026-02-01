@@ -93,14 +93,9 @@ function About() {
                   hover:shadow-2xl hover:shadow-purple-700/20
                   transition-transform duration-300">
                     <p className="text-sm text-gray-200 mb-6 text-justify">
-                      Aspire  to  become  a  skilled  Frontend  Developer  specializing  in 
-                      responsive, user-friendly web apps using technologies like React.js and 
-                      Tailwind  CSS.  As  a  Frontend  Intern,  eager  to  apply  academic 
-                      knowledge  and  project  experience  in  real-world  projects,  contribute 
-                      meaningfully  under  professional  guidance,  gain  hands-on  experience, 
-                      and continuously learn to grow into a competent developer. Available 
-                      and committed to a 4-5 month internship, flexible full-time or part-time 
-                      based on company needs.
+                      Aspire to become a developer starting as an intern, where I can apply academic knowledge, programming fundamentals, and project experience in real-world environments.
+With a background in frontend development and an interest in game development, I aim to contribute to building interactive, user-friendly applications and gameplay features under professional guidance.
+I am eager to gain hands-on experience, continuously learn, and grow into a competent developer while creating engaging and well-balanced user and player experiences, with a long-term commitment and flexible working schedule based on team needs.
                     </p>
                     <div>
                       <p className="text-gray-200 text-sm font-bold mt-2">Education</p>

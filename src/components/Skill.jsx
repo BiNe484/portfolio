@@ -10,10 +10,15 @@ import ReactJSIcon from "../assets/icons/reactjs.png";
 import ViteIcon from "../assets/icons/vite.png";
 import NodeJSIcon from "../assets/icons/nodejs.png";
 import TailwindIcon from "../assets/icons/tailwindcss.png";
+import TypeScriptIcon from "../assets/icons/typescript.png";
 import JavaScriptIcon from "../assets/icons/javascript.png";
 import MUIIcon from "../assets/icons/muiui.png";
 import PythonIcon from "../assets/icons/python.png";
 import UnityIcon from "../assets/icons/unity.png";
+import CSharpIcon from "../assets/icons/csharp.png";
+import FirebaseIcon from "../assets/icons/firebase.png";
+import SQLIcon from "../assets/icons/sql.png";
+
 
 import PostmanIcon from "../assets/icons/postman.png";
 import FigmaIcon from "../assets/icons/figma.png";
@@ -36,6 +41,10 @@ function Skill() {
     {
       name: "CSS",
       icon: CSSIcon,
+    },
+    {
+      name: "TypeScript",
+      icon: TypeScriptIcon,
     },
     {
       name: "JavaScript",
@@ -69,6 +78,18 @@ function Skill() {
       name: "Unity",
       icon: UnityIcon,
     },
+    {
+      name: "C#",
+      icon: CSharpIcon,
+    },
+    {
+      name: "Firebase",
+      icon: FirebaseIcon,
+    },
+    {
+      name: "SQL",
+      icon: SQLIcon,
+    },
   ];
 
   // Tools
@@ -97,7 +118,7 @@ function Skill() {
       name: "VS Code",
       icon: VSCodeIcon,
     },
-    {
+    /*{
       name: "Word",
       icon: WordIcon,
     },
@@ -108,7 +129,7 @@ function Skill() {
     {
       name: "PowerPoint",
       icon: PPTXIcon,
-    }
+    }*/
   ];
   return (
     <section id="skills" className="relative w-full flex pt-12">
