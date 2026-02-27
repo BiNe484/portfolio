@@ -3,6 +3,8 @@ import FadeIn from "./animation/FadeIn";
 import ProjectCard from "./ui/ProjectCard";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import GitHubIcon from "../assets/icons/github.png";
 
 function Project() {
   return (
@@ -85,7 +87,22 @@ function Project() {
           </FadeIn>
 
         </Grid>
-      </Box>
+        <Box className="flex justify-center mt-12">
+            <Button
+              variant="outlined"
+              startIcon={<img src={GitHubIcon} alt="GitHub" className="w-5 h-5 filter invert" />}
+              onClick={() => window.open("https://github.com/BiNe484", "_blank")}
+              sx={{
+                textTransform: "none",
+                color: "#fff",
+                borderColor: "#fff",
+                backgroundColor: "#363636",
+              }}
+            >
+              More Projects
+            </Button>
+        </Box>
+      </Box>    
     </section>
   );
 }

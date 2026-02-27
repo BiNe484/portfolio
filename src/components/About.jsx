@@ -13,7 +13,7 @@ function About() {
   const menuList = [
     {id: 1, icon: CalendarTodaySharpIcon, label: "Date of birth", content: "04/08/2004" },
     {id: 2, icon: MailOutlineSharpIcon, label: "Email", content: "minhkhanh484.work@gmail.com" },
-    {id: 3, icon: LocalPhoneOutlinedIcon, label: "Phone number", content: "0334437312" },
+    {id: 3, icon: LocalPhoneOutlinedIcon, label: "Phone number", content: "+84334437312" },
     {id: 4, icon: FacebookOutlinedIcon, label: "Facebook", content: "https://www.facebook.com/nguyen.minh.khanh.410853", href: "https://www.facebook.com/nguyen.minh.khanh.410853" },
   ];
 
@@ -101,7 +101,7 @@ I am eager to gain hands-on experience, continuously learn, and grow into a comp
                       <p className="text-gray-200 text-sm font-bold mt-2">Education</p>
                       <div className="text-gray-300 text-xs backdrop-blur-md border-gray-800 border rounded-xl p-4 mt-2">
                         <p className="font-bold">Computer Science</p>
-                        <p>2022 - 2026: Bachelor of Computer Science at Ton Duc Thang University (TDTU)</p>
+                        <p>2022 - Now: Bachelor of Computer Science at Ton Duc Thang University (TDTU)</p>
                       </div>
                     </div>
                   </div>
